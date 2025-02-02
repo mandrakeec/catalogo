@@ -1,3 +1,111 @@
+/* Estilos para la Sección de Bienvenida */
+.bienvenida {
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: url('bienvenida.jpg') no-repeat center center/cover; /* Imagen de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  padding: 20px; /* Espaciado para móviles */
+}
+
+.bienvenida::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+  z-index: 1;
+}
+
+.contenido-bienvenida {
+  position: relative;
+  z-index: 2;
+  animation: aparecer 2s ease-in-out;
+  max-width: 90%; /* Limita el ancho del contenido */
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bienvenida h1 {
+  font-size: 4rem;
+  margin: 0;
+  animation: tituloFlotante 3s infinite ease-in-out;
+}
+
+@keyframes tituloFlotante {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bienvenida p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.boton-bienvenida {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #e74c3c; /* Color del botón */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-bienvenida:hover {
+  background-color: #c0392b; /* Color del botón al pasar el mouse */
+}
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  .bienvenida h1 {
+    font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+  }
+
+  .bienvenida p {
+    font-size: 1.2rem; /* Tamaño más pequeño para móviles */
+  }
+
+  .boton-bienvenida {
+    font-size: 1rem; /* Tamaño más pequeño para móviles */
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bienvenida h1 {
+    font-size: 2rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+  }
+
+  .bienvenida p {
+    font-size: 1rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+  }
+
+  .boton-bienvenida {
+    font-size: 0.9rem; /* Tamaño aún más pequeño para pantallas muy pequeñas */
+    padding: 6px 12px;
+  }
+}
+
 /* Estilos generales */
 body {
   font-family: 'Arial', sans-serif;
