@@ -16,7 +16,8 @@ fetch('imagenes.json')
       img.classList.add('imagen-catalogo'); // Añadimos la clase para el lightbox
 
       const descripcion = document.createElement('p');
-      descripcion.textContent = `${imagen}`;
+      /*descripcion.textContent = `${imagen}`; */
+      descripcion.textContent = imagen.replace(/\.[^/.]+$/, '');
 
       producto.appendChild(img);
       producto.appendChild(descripcion);
