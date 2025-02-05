@@ -197,6 +197,7 @@ main {
   max-width: 90%;
   max-height: 90%;
   border-radius: 8px;
+  box-shadow: 0 0 15px 5px white; /* Contorno blanco suave */
 }
 
 .cerrar-lightbox {
