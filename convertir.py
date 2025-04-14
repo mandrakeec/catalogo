@@ -1,5 +1,5 @@
 import os
-
+#CONVIERTE ARCHIVOS .JPEG A .JPG
 # Ruta de la carpeta con las imágenes
 carpeta = r"C:\Users\soporte2\Downloads\IMAGENES"
 
